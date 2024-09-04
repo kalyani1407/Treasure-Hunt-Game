@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+#container {
+    display: flex;
+    height: 100vh;
+}
+
+#score-time {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    border-right: 2px solid #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#score-time h1 {
+    margin-bottom: 20px;
+}
+
+#score-time p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+#score-time form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#score-time form label, #score-time form input, #score-time form select, #score-time form button {
+    margin: 5px 0;
+}
+
+#game-container {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('congratulations.jpg1') no-repeat center center;
+    background-size: cover;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(10, 50px);
+    grid-template-rows: repeat(10, 50px);
+    gap: 5px;
+}
+
+.box {
+    width: 50px;
+    height: 50px;
+    background-color: lightblue;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.box img {
+    max-width: 100%;
+    max-height: 100%;
+    display: none;
+}
+
+.box.clicked img {
+    display: block;
+}
+
+#popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 2px solid black;
+    text-align: center;
+    display: none;
+    width: 300px;
+    padding: 20px;
+}
+
+.popup-content {
+    display: flex;
+    align-items: center;
+}
+
+.popup .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.popup .message {
+    flex: 1;
+}
+
+.popup .image img {
+    max-width: 100px;
+    height: auto;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treasure Hunt Game</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <div id="container">
+        <div id="score-time">
+            <h1>Treasure Hunt Game</h1>
+            <form id="settings-form" onsubmit="startGame(event)">
+                <label for="player-name">Player Name:</label>
+                <input type="text" id="player-name" required>
+                <label for="difficulty">Difficulty:</label>
+                <select id="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+                <button type="submit">Start Game</button>
+            </form>
+            <p>Score: <span id="score">100</span></p>
+            <p>Time: <span id="time">0s</span></p>
+        </div>
+        <div id="game-container">
+            <div id="grid">
+                <!-- 100 boxes for the grid -->
+                <script>
+                    for (let i = 0; i < 100; i++) {
+                        document.write('<div class="box" onclick="checkBox(this, ' + i + ')"></div>');
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <div class="message">
+                <p>Congratulations, you found the treasure!</p>
+            </div>
+            <div class="image">
+                <img src="congratulations.jpg" alt="Congratulations">
+            </div>
+        </div>
+    </div>
+
+    <script src="home.js"></script>
+</body>
+</html>

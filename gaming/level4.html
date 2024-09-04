@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treasure Hunt Game - Level 4</title>
+    <link rel="stylesheet" href="level4.css">
+</head>
+<body>
+    <div class="description"><br>
+        <h1>Welcome to Level 4 of the Treasure Hunt Game!</h1>
+        <p>In this level, you will explore a larger 8x8 grid to find the hidden treasure. Each cell in the grid could potentially hide the treasure, and your objective is to uncover it by clicking on the cells. Use the clues provided after each click to guide your search and find the treasure!</p>
+        <p><strong>How to Play:</strong></p>
+        <ul>
+            <li><strong>Grid Exploration:</strong> The game board consists of 64 cells arranged in an 8x8 grid. Click on any cell to explore it.</li>
+            <li><strong>Clues and Feedback:</strong> After each click, you will receive a clue about how close you are to the treasure. These clues will help you narrow down the potential locations of the treasure:
+                <ul>
+                    <li><strong>Lotus!</strong> You are within 1 cell of the treasure.</li>
+                    <li><strong>Jasmine!</strong> You are within 2 cells of the treasure.</li>
+                    <li><strong>Marigold!</strong> You are within 3 cells of the treasure.</li>
+                    <li><strong>Hibiscus!</strong> You are more than 4 cells of the treasure.</li>
+                    <li><strong>Rose!</strong> You are more than 5 cells away from the treasure.</li>
+                </ul>
+            </li>
+            <li><strong>Score:</strong> Your score will increase with each cell you explore. Try to find the treasure with the fewest clicks to keep your score low.</li>
+            <li><strong>Winning the Level:</strong> If you uncover the cell containing the treasure, a congratulatory popup will appear. Click the "Next Level" button in the popup to proceed to Level 5.</li>
+        </ul>
+        <p><strong>Objective:</strong> Your goal is to find the hidden treasure with the fewest possible clicks. Pay attention to the clues to guide your search and improve your chances of success.</p>
+        <p>Good luck, treasure hunter! Your adventure continues now. Start exploring the grid and find that treasure!</p>
+    </div>
+    <div class="container"><br><br>
+        <div id="score">Score: 0</div>
+        <div id="level">Level: 4</div>
+        <div id="clue">Clue: Start searching!</div>
+        <div id="grid" class="grid"></div>
+    </div>
+
+    <div id="popup" class="popup hidden">
+        <div class="popup-content">
+            <h2>Congratulations! You found the treasure!</h2>
+            <video width="100" height="100" autoplay muted>
+                <source src="wiining.mp4" type="video/mp4">
+                <source src="wiining.ogg" type="video/ogg">
+              Your browser does not support the video tag.
+            </video>
+            <button id="next-level-btn">Next Level</button>
+        </div>
+    </div>
+
+    <script src="level4.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treasure Hunt Game</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <h1>Treasure Hunt</h1>
+    <div id="game-container">
+        <div id="grid">
+            <!-- 100 boxes for the grid -->
+            <script>
+                for (let i = 0; i < 100; i++) {
+                    document.write('<div class="box" onclick="checkBox(this, ' + i + ')"></div>');
+                }
+            </script>
+        </div>
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <div class="message">
+                <p>Congratulations, you found the treasure!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
